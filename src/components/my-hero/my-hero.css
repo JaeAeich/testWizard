@@ -2,11 +2,26 @@
   display: block;
 }
 
+.stencil-router-link {
+  text-decoration: none;
+}
+
+.stencil-router-link-active {
+  text-decoration: none;
+}
 .main-container {
   width: 100%;
   margin-top: calc(var(--space-lg)*5);
 }
-
+button,
+button:focus,
+button:hover,
+button:active,
+button:visited {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
 .container {
   width: 75%;
   margin: auto;
@@ -56,6 +71,7 @@
 .btn-primary {
   cursor: pointer;
   padding: var(--space-md);
+  font-size: var(--font-sm);
   color: var(--text-light);
   user-select: none;
   border-radius: var(--border-md);

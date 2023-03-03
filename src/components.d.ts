@@ -14,11 +14,15 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface MyArray {
+    }
     interface MyFooter {
     }
     interface MyHero {
     }
     interface MyNavbar {
+    }
+    interface MyString {
     }
 }
 declare global {
@@ -40,6 +44,12 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLMyArrayElement extends Components.MyArray, HTMLStencilElement {
+    }
+    var HTMLMyArrayElement: {
+        prototype: HTMLMyArrayElement;
+        new (): HTMLMyArrayElement;
+    };
     interface HTMLMyFooterElement extends Components.MyFooter, HTMLStencilElement {
     }
     var HTMLMyFooterElement: {
@@ -58,13 +68,21 @@ declare global {
         prototype: HTMLMyNavbarElement;
         new (): HTMLMyNavbarElement;
     };
+    interface HTMLMyStringElement extends Components.MyString, HTMLStencilElement {
+    }
+    var HTMLMyStringElement: {
+        prototype: HTMLMyStringElement;
+        new (): HTMLMyStringElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "my-array": HTMLMyArrayElement;
         "my-footer": HTMLMyFooterElement;
         "my-hero": HTMLMyHeroElement;
         "my-navbar": HTMLMyNavbarElement;
+        "my-string": HTMLMyStringElement;
     }
 }
 declare namespace LocalJSX {
@@ -75,19 +93,25 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface MyArray {
+    }
     interface MyFooter {
     }
     interface MyHero {
     }
     interface MyNavbar {
     }
+    interface MyString {
+    }
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
+        "my-array": MyArray;
         "my-footer": MyFooter;
         "my-hero": MyHero;
         "my-navbar": MyNavbar;
+        "my-string": MyString;
     }
 }
 export { LocalJSX as JSX };
@@ -97,9 +121,11 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "my-array": LocalJSX.MyArray & JSXBase.HTMLAttributes<HTMLMyArrayElement>;
             "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
             "my-hero": LocalJSX.MyHero & JSXBase.HTMLAttributes<HTMLMyHeroElement>;
             "my-navbar": LocalJSX.MyNavbar & JSXBase.HTMLAttributes<HTMLMyNavbarElement>;
+            "my-string": LocalJSX.MyString & JSXBase.HTMLAttributes<HTMLMyStringElement>;
         }
     }
 }

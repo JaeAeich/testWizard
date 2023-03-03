@@ -1,5 +1,4 @@
 import { Component, Host, h } from '@stencil/core';
-// import Typewriter from 'typewriter-effect';
 
 @Component({
   tag: 'my-hero',
@@ -11,7 +10,7 @@ export class MyHero {
     return (
       <Host>
         <slot>
-          <div class="main-container">
+          <div id="particles-js">
             <div class="container">
               <div class="left">
                 <div class="text">
@@ -19,8 +18,12 @@ export class MyHero {
                   <div class="sm-text">generating randomness quicker than ever</div>
                 </div>
                 <div class="nav">
-                  <div class="vector btn-primary">Arrays</div>
-                  <div class="string btn-primary">String</div>
+                  <stencil-route-link url="/array">
+                    <button class="vector btn-primary">Arrays</button>
+                  </stencil-route-link>
+                  <stencil-route-link url="/string">
+                    <button class="string btn-primary">String</button>
+                  </stencil-route-link>
                 </div>
               </div>
               <div class="right">
