@@ -8,8 +8,71 @@
   Any global CSS variables should also be applied here.
 */
 
+:root {
+  /* color theme of the website */
+  --color60: #fafaf9;
+  --color30: #084968;
+  --color10: #5867e8;
+
+  /* text color */
+  --text-light: #ffffff;
+  --text-dark: #181818;
+  --text-light-hover: #c9c9c9;
+  --text-dark-hover: #000;
+
+  /* font weight */
+  --font-xlg: 4.75rem;
+  --font-lg: 2.625rem;
+  --font-md: 1.75rem;
+  --font-sm: 1rem;
+  --font-xsm: .5rem;
+
+  /* border radius */
+  --border-lg: 50%;
+  --border-md: 0.5rem;
+  --border-sm: 0.25rem;
+
+  /* shadow */
+  --shadow-hover: 0 2px 2px 0 rgba(0, 0, 0, 0.10);
+  --shadow-click: 0 2px 4px 0 rgba(0, 0, 0, 0.40);
+
+  /* padding ,margin and gap */
+  --space-lg: 1.5rem;
+  --space-md: 1rem;
+  --space-sm: 0.75rem;
+  --space-xsm: 0.5rem;
+
+  /* container width */
+  --contain-lg: 1240px;
+  --contain-md: 720px;
+  --contain-sm: 540px;
+
+  /* media query */
+
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 body {
   margin: 0px;
   padding: 0px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.btn-primary {
+  background-color: var(--color10);
+  color: var(--text-light-hover);
+}
+
+.btn-primary:hover {
+  box-shadow: var(--shadow-hover);
+  color: -var(--text-light);
+}
+
+.btn-primary:active {
+  box-shadow: var(--shadow-click);
+
 }

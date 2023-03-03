@@ -14,6 +14,12 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface MyFooter {
+    }
+    interface MyHero {
+    }
+    interface MyNavbar {
+    }
 }
 declare global {
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
@@ -34,10 +40,31 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLMyFooterElement extends Components.MyFooter, HTMLStencilElement {
+    }
+    var HTMLMyFooterElement: {
+        prototype: HTMLMyFooterElement;
+        new (): HTMLMyFooterElement;
+    };
+    interface HTMLMyHeroElement extends Components.MyHero, HTMLStencilElement {
+    }
+    var HTMLMyHeroElement: {
+        prototype: HTMLMyHeroElement;
+        new (): HTMLMyHeroElement;
+    };
+    interface HTMLMyNavbarElement extends Components.MyNavbar, HTMLStencilElement {
+    }
+    var HTMLMyNavbarElement: {
+        prototype: HTMLMyNavbarElement;
+        new (): HTMLMyNavbarElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "my-footer": HTMLMyFooterElement;
+        "my-hero": HTMLMyHeroElement;
+        "my-navbar": HTMLMyNavbarElement;
     }
 }
 declare namespace LocalJSX {
@@ -48,10 +75,19 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface MyFooter {
+    }
+    interface MyHero {
+    }
+    interface MyNavbar {
+    }
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
+        "my-footer": MyFooter;
+        "my-hero": MyHero;
+        "my-navbar": MyNavbar;
     }
 }
 export { LocalJSX as JSX };
@@ -61,6 +97,9 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
+            "my-hero": LocalJSX.MyHero & JSXBase.HTMLAttributes<HTMLMyHeroElement>;
+            "my-navbar": LocalJSX.MyNavbar & JSXBase.HTMLAttributes<HTMLMyNavbarElement>;
         }
     }
 }

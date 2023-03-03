@@ -1,0 +1,35 @@
+:host {
+  display: block;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  background-color: var(--color30);
+  width: 100vw;
+  display: flex;
+  /* padding: var(--space-lg); */
+  color: var(--color60);
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.container {
+  max-width: var(--container-lg);
+  margin: auto;
+  padding: var(--space-sm);
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.mini-container {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+}
+
+
+.heart {
+  color: rgb(235, 108, 108);
+}
